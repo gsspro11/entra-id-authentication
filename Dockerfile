@@ -2,7 +2,7 @@ FROM node:latest@sha256:64c46a664eccedec63941dab4027c178a36debe08a232d4f9d7da5ac
 
 WORKDIR /app
 
-COPY ./_Shared-PostOffice-Auth-Artifact .
+COPY ./_Shared-EntraId-Auth-Artifact .
 
 RUN npm install
 

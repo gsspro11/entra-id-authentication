@@ -17,7 +17,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   private readonly destroy$ = new Subject<void>();
   currentUser: any;
-  swaggerUrl = environment.postOfficeApiUrl + '/swagger';
+  swaggerUrl = environment.entraIdApiUrl + '/swagger';
 
   constructor(
     private _formBuilder: FormBuilder,

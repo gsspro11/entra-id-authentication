@@ -1,6 +1,6 @@
-# Shared Post Office — Authentication (Angular)
+# Shared Entra Id — Authentication (Angular)
 
-Shared-PostOffice-Auth is an Angular 17 application that provides authentication UI and SSR support for the Post Office authentication flows.
+Shared-EntraId-Auth is an Angular 17 application that provides authentication UI and SSR support for the Entra Id authentication flows.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ Shared-PostOffice-Auth is an Angular 17 application that provides authentication
 ## Quick setup
 
 1. Clone the repo and change into the project folder:
-   - cd c:\Users\gsdasilva\source\repos\Shared-PostOffice-Auth
+   - cd c:\Users\gsdasilva\source\repos\Shared-EntraId-Auth
 
 2. Install dependencies:
    - npm ci
