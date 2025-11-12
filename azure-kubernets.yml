@@ -1,0 +1,125 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: shared-entra-id-main
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: shared-entra-id-auth-tls
+  namespace: shared-entra-id-main
+type: kubernetes.io/tls
+data:
+  tls.crt: |
+       #{TLS_CERT}#
+  tls.key: |
+       #{TLS_KEY}#
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: shared-entra-id-main
+  name: shared-entra-id-auth-deploy
+  labels:
+    app: shared-entra-id-auth-deploy
+spec:
+  replicas: #{replicas}#
+  selector:
+    matchLabels:
+      app: shared-entra-id-auth-deploy
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: shared-entra-id-auth-deploy
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 1
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - shared-entra-id-auth-deploy
+                topologyKey: "kubernetes.io/hostname"
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: agentpool
+                    operator: NotIn
+                    values:
+                      - nodepools01
+                      - apitec
+      containers:
+        - name: shared-entra-id-auth-deploy
+          image: #{DOCKER_REGISTRY}#/beneficiary/shared-entra-id-auth:#{BuildId}##{Environment}#
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+            - containerPort: 443
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "0.5"
+            requests:
+              memory: "100Mi"
+              cpu: "0.001"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: shared-entra-id-main
+  name: shared-entra-id-auth-service
+  labels:
+    app: shared-entra-id-auth-service
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      name: http
+    - protocol: TCP
+      port: 443
+      targetPort: 443
+      name: https
+  selector:
+    app: shared-entra-id-auth-deploy
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: shared-entra-id-main
+  name: shared-entra-id-auth-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+    - host: auth#{Environment}#-entra-id.gsspro11.net
+      http:
+        paths:
+          - backend:
+              service:
+                name: shared-entra-id-auth-service
+                port:
+                  number: 80
+            path: /(.*)
+            pathType: Prefix
+  tls:
+    - secretName: shared-entra-id-auth-tls
+      hosts:
+        - auth#{Environment}#-entra-id.gsspro11.net

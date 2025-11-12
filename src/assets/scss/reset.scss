@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+image {
+  width: 100%;
+}
+
+html {
+  font-size: 62.5% !important;
+}
+
+.container {
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 5rem;
+  max-width: 1440px;
+}

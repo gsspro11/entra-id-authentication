@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "assets/scss/reset.scss";
+@import "assets/scss/variables.scss";
+@import "assets/scss/animate.scss";
+@import "assets/scss/font.scss";
+@import "assets/scss/utils.scss";
+
+
+.main-custom{
+  background: var(--neutral-06);
+  min-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}

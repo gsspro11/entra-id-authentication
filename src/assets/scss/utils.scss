@@ -1,0 +1,203 @@
+@import "../scss/variables.scss";
+
+////// BUTTONS ////////
+///
+
+
+.btn-custom {
+  border: unset;
+  padding: 8px 24px;
+  border-radius: 30px !important;
+  font-family: $font-family-gsspro11 !important;
+  cursor: pointer;
+  background-color: none;
+
+  &:not(:hover){
+    transition: background-color .3s ease-in-out;
+    -o-transition: background-color .3s ease-in-out;
+    -ms-transition: background-color .3s ease-in-out;
+    -moz-transition: background-color .3s ease-in-out;
+    -webkit-transition: background-color .3s ease-in-out;
+  }
+
+  &:hover{
+    transition: background-color .3s ease-in-out;
+    -o-transition: background-color .3s ease-in-out;
+    -ms-transition: background-color .3s ease-in-out;
+    -moz-transition: background-color .3s ease-in-out;
+    -webkit-transition: background-color .3s ease-in-out;
+  }
+
+  &:disabled {
+    background: var(--gsspro11-gray-01) !important;
+    color: var(--gsspro11-gray-02) !important;
+    font-weight: 600 !important;
+    border: 1px solid var(--gsspro11-gray-01) !important;
+  }
+
+  // &.btn-cta-outline-white {
+  //   background: none;
+  //   color: white;
+  //   border: 2px solid white;
+  //   border-radius: 10px;
+  //   padding: inset;
+  //   padding: 13px 19px;
+  //   gap: 10px;
+  //   font-size: 1.6rem;
+  &.btn-cta-outline-white{
+    background: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: inset;
+    padding: 13px 19px;
+    gap:10px;
+    font-size: 1.6rem;
+  }
+  &.btn-cta-white{
+    background: white;
+    color: black;
+    // border: 2px solid white;
+    border-radius: 10px;
+    padding: inset;
+    padding: 13px 19px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    // width: 100%;
+    min-width: 18.4rem;
+  }
+
+  &.btn-cta-red-small{
+    background: var(--gsspro11-red-1000);
+    color: white;
+    border-radius: 10px;
+    padding: inset;
+    // padding: 13px 19px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    // width: 100%;
+    min-width: 5.0rem;
+    height: 4.8rem;
+  }
+
+  &.btn-cta-red{
+    background: var(--gsspro11-red-1000);
+    color: white;
+    border-radius: 10px;
+    padding: inset;
+    // padding: 13px 19px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    // width: 100%;
+    min-width: 19.5rem;
+    height: 4.8rem;
+  }
+  &.btn-logout{
+    background: var(--gsspro11-red-1000);
+    color: white;
+    border-radius: 10px;
+    padding: inset;
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  &.btn-cta-red-full{
+    background: var(--gsspro11-red-1000);
+    color: white;
+    border-radius: 10px;
+    padding: inset;
+    // padding: 13px 19px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    width: 100%;
+    min-width: 18.4rem;
+    height: 4.5rem;
+  }
+
+  &.btn-cta-white {
+    background: white;
+    color: black;
+    // border: 2px solid white;
+    border-radius: 10px;
+    padding: inset;
+    padding: 13px 19px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    // width: 100%;
+    min-width: 18.4rem;
+  }
+
+  &.btn-cta-red-small {
+    background: var(--gsspro11-red-1000);
+    color: white;
+    border-radius: 10px;
+    padding: inset;
+    // padding: 13px 19px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    // width: 100%;
+    min-width: 5.0rem;
+    height: 4.8rem;
+  }
+
+  &.btn-cta-red {
+    background: var(--gsspro11-red-1000);
+    color: white;
+    border-radius: 10px;
+    padding: inset;
+    // padding: 13px 19px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    // width: 100%;
+    min-width: 19.5rem;
+    height: 4.8rem;
+  }
+
+  &.btn-cta-red-full {
+    background: var(--gsspro11-red-1000);
+    color: white;
+    border-radius: 10px;
+    padding: inset;
+    // padding: 13px 19px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    width: 100%;
+    min-width: 18.4rem;
+    height: 4.5rem;
+  }
+
+  &.btn-cta-red-outline {
+    background: var(--white);
+    border: 1px solid var(--gsspro11-red-1000);
+    color: var(--black);
+    border-radius: 10px;
+    padding: inset;
+    // padding: 13px 19px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    min-width: 4.80rem;
+    height: 4.5rem;
+  }
+
+  &.btn-circle{
+    padding: .4rem .4rem;
+    border: .1rem solid var(--gsspro11-red-1000);
+
+    img{
+      width: 2.5rem;
+    }
+
+    &:hover{
+      img{
+        filter: invert(99%) sepia(100%) saturate(0%) hue-rotate(282deg) brightness(110%) contrast(101%);
+      }
+    }
+  }
+
+
+}
+
+////// PADDING ////////
+///
+.pl-0 {
+  padding-left: 0 !important;
+}

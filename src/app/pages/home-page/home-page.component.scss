@@ -1,0 +1,65 @@
+@import "../../../assets/scss/variables.scss";
+
+#home-page {
+  margin-top: 4.1rem;
+
+  .title-section {
+    h1 {
+      color: var(--primary-black-800);
+    }
+
+    .description {
+      margin-top: 1.6rem;
+      color: var(--font-color);
+    }
+  }
+
+  .container-instructions {
+    margin-top: 3.2rem;
+  }
+
+  .form-error {
+    margin-top: 0.5rem;
+    p {
+      color: var(--gsspro11-red-50);
+    }
+  }
+
+  .search-container {
+    margin-top: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.6rem;
+
+    .form-group-custom {
+      width: 90%;
+      position: relative;
+
+      & label {
+        position: absolute;
+        top: 8px;
+        left: 22px;
+      }
+
+      & .is-invalid {
+        border: 1px solid var(--gsspro11-red-50);
+      }
+    }
+
+    .form-control-custom {
+      font-size: 1.6rem;
+      font-weight: 400;
+      border-radius: 30px;
+      width: 100%;
+      min-height: 4.8rem;
+      padding: 2rem 3rem 2rem 3rem;
+      border: 1px solid var(--neutral-04);
+      field-sizing: content;
+      color: darkgray;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+      overflow: auto;
+    }
+  }
+}

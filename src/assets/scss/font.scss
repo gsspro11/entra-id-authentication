@@ -1,0 +1,90 @@
+// New Font Family Edenred
+@font-face {
+  font-family: Edenred;
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/gsspro11_bold.otf');
+}
+
+@font-face {
+  font-family: Edenred;
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/gsspro11_bold.otf');
+}
+
+@font-face {
+  font-family: Edenred;
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/gsspro11_medium.otf');
+}
+
+@font-face {
+  font-family: Edenred;
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/gsspro11_bold.otf');
+}
+
+//Font Family Edenred
+
+
+
+// New Font Family Ubuntu
+
+
+//
+
+
+
+/* Material Icons Import */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Material-Icons.woff2') format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+html {
+  font-family: $font-family-ubuntu;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-main;
+}
+
+button {
+  font-family: $font-family-ubuntu;
+}
+
+p,
+span,
+input,
+a {
+  font-family: $font-family-ubuntu;
+  // font-size: 1.6rem;
+}

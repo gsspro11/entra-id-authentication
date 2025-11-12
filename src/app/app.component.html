@@ -1,0 +1,10 @@
+<main class="main-custom">
+  <app-toasts />
+  @if(!hideNavbar){
+  <app-navbar-component></app-navbar-component>
+  }
+  <router-outlet />
+  @if(isLoading){
+  <app-loading />
+  }
+</main>

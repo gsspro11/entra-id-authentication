@@ -1,0 +1,52 @@
+@import '../scss/include-media.scss';
+
+$breakpoints: (
+  'phone': 320px,
+  'tablet': 768px,
+  'desktop': 1024px
+) !default;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+// font-family
+$font-family-main: 'Edenred', tahoma, sans-serif;
+$font-family-ubuntu: 'Ubuntu', tahoma, sans-serif;
+$font-family-gsspro11: 'Edenred', tahoma, sans-serif;
+
+$box-shadows-default: 0px 4px 8px 0px #00000014;
+
+
+////COLORS /////
+:root{
+  --black: #000;
+  --white: #FFF;
+
+  --gsspro11-red-1000: #ef3038;
+  --endenred-red-70: #FA837A;
+  --primary-black-800: #333333;
+  --neutral-100: #FFFFFF;
+  --neutral-05: #2E3238;
+  --neutral-06: #F8F8F9;
+  --neutral-07: #F1F7FF;
+
+  --ds-neutral-04: #B9BEC5;
+
+//colors declared without DS
+  --neutral-04: #CFD3D8;
+  --gsspro11-gray-01: #DBDDE1;
+  --gsspro11-gray-02: #BFBFBF;
+  --gsspro11-red-50: #FF3B30;
+  --gsspro11-green: #34C759;
+  --gsspro11-gray: #AEAEB2;
+  --gsspro11-blue: #F3F9FF;
+  --gsspro11-gray-separator: #6D7787;
+
+
+
+  --gsspro11-orange-translucid: #FF832B29;
+  --gsspro11-orange: #FF832B;
+  --font-color: #5B6371;
+
+
+}

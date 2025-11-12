@@ -1,0 +1,27 @@
+@import "../../../assets/scss/variables.scss";
+
+#page-not-found{
+  margin-top: 11.5rem;
+
+  .content-404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8.5rem;
+
+    .description{
+      h2{
+        font-size: 8.0rem;
+      }
+      p{
+        font-size: 4.0rem;
+        font-weight: 600;
+        font-family: $font-family-main!important;
+        max-width: 30.0rem;
+      }
+      button{
+        margin-top: 2.4rem;
+      }
+    }
+  }
+}
